@@ -18,6 +18,7 @@ public class Task02Main {
             int read;
             while ((read = in.read()) != -1) {
                 if (read == 13) {
+                    int prev = read;
                     int next = in.read();
                     if (next == 10) {
                         System.out.write(10);

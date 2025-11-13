@@ -18,10 +18,11 @@ public class Task03Main {
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
 
-        try (Scanner scanner = new Scanner (inputStream, charset)) {
+        try (Scanner scanner = new Scanner(inputStream, charset)) {
             scanner.useDelimiter("\\A");
             return scanner.hasNext() ? scanner.next() : "";
-        } catch (RuntimeException e) { // Думал про nullPointException, взял этот потому что все NPE будут Runtime. вроде.
+        } catch (
+                RuntimeException e) { // Думал про nullPointException, взял этот потому что все NPE будут Runtime. вроде.
             throw new IllegalArgumentException("cannot be null", e);
         }
     }
